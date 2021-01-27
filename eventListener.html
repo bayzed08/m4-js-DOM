@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #changesmoth {
+        border: 2px solid red;
+        background-color: antiquewhite;
+        padding: 20px;
+        margin: 20px;
+        transition: all 2s ease-in;
+      }
+      #last-click.clicked #changesmoth {
+        width: 600px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div id="changesmoth">
+          <h1 id="firsth1">implementing eventlistener- 1</h1>
+          <h1>implementing eventlistener- 2</h1>
+          <h1>implementing eventlistener- 3</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            perferendis perspiciatis at, est vel impedit doloribus eaque ad!
+            Possimus, tempore?
+          </p>
+          <button>button=1</button>
+          <button id="second-btn">button=2</button>
+          <button>button=3</button>
+          <button id="last-click">button=4</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function handleClick() {
+        console.log("bayzed islam");
+        alert(22);
+        document.body.style.backgroundColor = "lightgray";
+        document.body.style.margin = "30px";
+        document.body.style.color = "red";
+      }
+      var seconddBtn = document.getElementById("second-btn");
+      seconddBtn.addEventListener("click", handleClick);
+      // seconddBtn.onclick = handleClick;
+      document
+        .getElementById("last-click")
+        .addEventListener("click", function () {
+          document.body.style.backgroundColor = "lightgreen";
+          document.body.style.margin = "20px";
+          document.body.style.color = "blue";
+          document.getElementById("firsth1").style.fontSize = "40px";
+          document.getElementsByTagName("h3").style.fontSize = "40px";
+          $(this).toggleClass("clicked");
+        });
+    </script>
+  </body>
+</html>

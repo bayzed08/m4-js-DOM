@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div id="container">
+          <h1>My List</h1>
+          <ul id="mylist">
+            <li id="first" class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Nulla optio quo quidem cupiditate.</li>
+            <li class="item">Veniam quae animi fugit repellat.</li>
+            <li class="item">Unde doloribus excepturi voluptatum labore!</li>
+            <li class="item">Laborum quae et eligendi ipsa.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script>
+      var item = document.getElementsByClassName("item");
+      for (let i = 0; i < item.length; i++) {
+        var element = item[i];
+        element.addEventListener("click", function (event) {
+          console.log(this, event.target.innerText);
+        });
+      }
+      //   document
+      //     .getElementById("first")
+      //     .addEventListener("click", function (event) {
+      //       console.log("first element selected");
+      //       event.stopPropagation();
+      //       document.body.style.backgroundColor = "lightgray";
+      //     });
+      //   document
+      //     .getElementById("mylist")
+      //     .addEventListener("click", function (event) {
+      //       console.log("ul list selected");
+      //       document.body.style.backgroundColor = "lightgray";
+      //     });
+      //   document
+      //     .getElementById("container")
+      //     .addEventListener("click", function (event) {
+      //       console.log("container selected");
+      //       document.body.style.backgroundColor = "lightgray";
+      //     });
+    </script>
+  </body>
+</html>

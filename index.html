@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom</title>
+    <style>
+        body {
+            margin: 100px;
+            border: 1px solid green;
+        }
+        
+        .article {
+            border: 2px solid rgb(129, 125, 125);
+            border-radius: 20px;
+            margin: 10px 70px 10px 70px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exploring DOM</h1>
+    <div class="article">
+        <h3>Article-1</h3>
+        <p class="author">author-1</p>
+        <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, harum.
+        </p>
+    </div>
+    <div class="article">
+        <h3>Article-2</h3>
+        <p class="author">author-2</p>
+        <p class="description">
+            Dolorem, nisi maxime vitae sed quas porro officia dolore perferendis!
+        </p>
+    </div>
+    <div class="article">
+        <h3 id="fortest">Article-3</h3>
+        <p class="author">author-3</p>
+        <p class="description">
+            Vero obcaecati corrupti nobis ea minima expedita ad ut eligendi.
+        </p>
+    </div>
+    <p><button onclick="myMove()">Click Me</button></p>
+    <script>
+        var author = document.getElementsByClassName("author");
+        console.log(author);
+
+        for (var i = 0; i < author.length; i++) {
+            element = author[i];
+            console.log(element);
+            element.style.backgroundColor = "lightgray";
+            element.style.fontSize = "30px";
+            element.style.color = "blue";
+            element.style.marginLeft = "10px";
+            element.style.padding = "5px";
+            element.style.borderBottom = "2px solid gray";
+            element.style.borderRadius = "10px";
+            element.innerHTML = "Lekhok : " + (i + 1);
+            element.style.boxShadow = "1px 1px 1px 2px gray";
+            element.style.transition = "backgroundColor 2s ease 2s";
+        }
+
+        function myMove() {
+            var elem = document.getElementById("fortest");
+            elem.style.backgroundColor = "lightgray";
+            elem.style.Color = "white";
+            elem.style.fontSize = "40px";
+            elem.style.transition = "fontSize 2s";
+        }
+    </script>
+</body>
+
+</html>
